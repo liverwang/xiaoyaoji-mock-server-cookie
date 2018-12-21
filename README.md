@@ -1,5 +1,5 @@
-# xiaoyaoji-mock-server
-
+# xiaoyaoji-mock-server-cookie
+- 基于[xiaoyaoji-mock-server]:https://github.com/alcat2008/xiaoyaoji-mock-server 改造，新的小幺鸡服务调整了接口配置数据结构
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -33,7 +33,9 @@ After confirming that your development environment meets the specified [requirem
 ```bash
 $ git clone <url>
 $ cd xiaoyaoji-mock-server
+
 $ npm install                   # Install project dependencies
+$ npm build                     # build app
 $ npm start                     # Compile and launch
 ```
 
@@ -45,7 +47,7 @@ The structure of 'profile.json' file is shown below.
 
 ```javascript
 {
-  "host": "",                    // xiaoyaoji host, such as 'http://api.com/'
+  "host": "",                    // xiaoyaoji host, such as 'http://www.xiaoyaoji.cn/'
   "projectId": "",               // project's id
   "token": "",                   // find in your browser's storage
   "inject": {                    // can custom some api here
@@ -62,14 +64,14 @@ The structure of 'profile.json' file is shown below.
 
 ## Usage
 
-### Use `xiaoyaoji-mock-server` in current project
+### Use `xiaoyaoji-mock-server-cookie` in current project
 
 Installation:
 
-[![xiaoyaoji-mock-server](https://nodei.co/npm/xiaoyaoji-mock-server.png)](https://npmjs.org/package/xiaoyaoji-mock-server)
+[![xiaoyaoji-mock-server-cookie](https://nodei.co/npm/xiaoyaoji-mock-server-cookie.png)](https://npmjs.org/package/xiaoyaoji-mock-server-cookie)
 
 ```bash
-npm install --save-dev xiaoyaoji-mock-server
+npm install --save-dev xiaoyaoji-mock-server-cookie
 ```
 
 Then, add `mock` to [npm scripts](https://docs.npmjs.com/misc/scripts):
@@ -77,7 +79,7 @@ Then, add `mock` to [npm scripts](https://docs.npmjs.com/misc/scripts):
 ```json
 {
   "scripts": {
-    "mock": "xiaoyaoji-mock-server --file=<profile path>"
+    "mock": "xiaoyaoji-mock-server-cookie --file=<profile path>"
   }
 }
 ```
@@ -91,12 +93,12 @@ Now, just run `npm run mock`.
 
 ### CLI
 
-We can install `xiaoyaoji-mock-server` as a cli command and explore what it can do by `xiaoyaoji-mock-server -h`. However, the recommended way to use `xiaoyaoji-mock-server` is to install it as `devDependencies`.
+We can install `xiaoyaoji-mock-server-cookie` as a cli command and explore what it can do by `xiaoyaoji-mock-server-cookie -h`. However, the recommended way to use `xiaoyaoji-mock-server-cookie` is to install it as `devDependencies`.
 
 ```bash
-$ npm install -g xiaoyaoji-mock-server
-$ xiaoyaoji-mock-server -h
-  Usage: xiaoyaoji-mock-server [options]
+$ npm install -g xiaoyaoji-mock-server-cookie
+$ xiaoyaoji-mock-server-cookie -h
+  Usage: xiaoyaoji-mock-server-cookie [options]
 
   Options:
 
@@ -133,12 +135,3 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 Attention: The host must be specified!
-
-## Todos
-
-- ~~mock api~~
-- ~~inject, dict~~
-- show api list
-- auto test
-- xiaoyaoji api definition validator
-- multiple project support

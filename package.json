@@ -1,15 +1,15 @@
 {
-  "name": "xiaoyaoji-mock-server",
+  "name": "xiaoyaoji-mock-server-cookie",
   "version": "1.0.0",
   "bin": {
-    "xiaoyaoji-mock-server": "./bin/index.js"
+    "xiaoyaoji-mock-server-cookie": "./bin/index.js"
   },
   "files": [
     "lib",
     "bin"
   ],
   "scripts": {
-    "start": "node ./bin/index",
+    "start": "node ./bin/index --file=profile.json",
     "build": "rimraf lib && babel src --out-dir lib --plugins=transform-object-rest-spread --compact=true",
     "lint": "eslint src",
     "lint-fix": "eslint --fix src",
@@ -51,5 +51,20 @@
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "description": "小幺鸡在线接口生成Mock数据",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liverwang/xiaoyaoji-mock-server-cookie.git"
+  },
+  "author": "wangyulong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liverwang/xiaoyaoji-mock-server-cookie/issues"
+  },
+  "homepage": "https://github.com/liverwang/xiaoyaoji-mock-server-cookie#readme"
 }

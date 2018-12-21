@@ -90,9 +90,8 @@ function mockResponse(response, dict) {
     errmsg: '接口响应描述',
   }
 
-  const responseData = response[2]
-  if (responseData) {
-    finalResponse.data = mockCollectionByType(responseData, dict)
+  if (response) {
+    finalResponse.data = mockCollectionByType(response[0], dict)
   }
 
   return finalResponse
