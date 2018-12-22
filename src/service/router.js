@@ -19,6 +19,7 @@ function getProjectData(url, profileData) {
   })
 }
 
+const FILTER_SYS_TYPES = ['sys.folder', 'sys.http']
 
 function buildRouter(folder, prefixs, profileData, router) {
   console.log('******      ' + folder.name + '      ****** Start')
@@ -27,7 +28,7 @@ function buildRouter(folder, prefixs, profileData, router) {
       buildRouter(_folder, prefixs, profileData, router)
     })
   }
-
+  if (FILTER_SYS_TYPES.indexOf(folder.type) < 0) return
   if (folder.content) {
     const requestContent = JSON.parse(folder.content)
     if (!requestContent.url) return
