@@ -1,6 +1,6 @@
 {
   "name": "xiaoyaoji-mock-server-cookie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "xiaoyaoji-mock-server-cookie": "./bin/index.js"
   },
